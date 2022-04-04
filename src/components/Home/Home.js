@@ -10,7 +10,7 @@ const Home = () => {
   const reviewsall=reviews.splice(0, 3)
   return (
     <div>
-      <div className="flex justify-around mt-40 mb-60 items-center">
+      <div className="flex justify-around mt-40 mb-40 items-center">
         <div className="text-5xl font-bold ">
           <h2>It's Not Just snow-board</h2>
           <h2 className="text-cyan-400">Enjoy your life </h2>
