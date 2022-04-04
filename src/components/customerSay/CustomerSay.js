@@ -1,7 +1,7 @@
 import React from "react";
 import "./CustomerSay.css";
 const CustomerSay = ({ review }) => {
-  console.log(review);
+  console.log(review)
   const { name, image, detail, ratting } = review;
 
     return (

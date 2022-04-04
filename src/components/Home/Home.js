@@ -6,7 +6,8 @@ import "./Home.css";
 
 
 const Home = () => {
-    const [reviews,setReviews]=useReview()
+  const [reviews, setReviews] = useReview()
+  const reviewsall=reviews.splice(0, 3)
   return (
     <div>
       <div className="flex justify-around mt-40 mb-60 items-center">
@@ -36,7 +37,8 @@ const Home = () => {
           </h1>
           <hr className="w-60 mx-auto mt-5 " />
       <div className="reviews-container">
-        {reviews.map((review) => (
+        
+        {reviewsall.map((review) => (
           <CustomerSay key={review.id} review={review}></CustomerSay>
         ))}
       </div>
