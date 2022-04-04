@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
+import useReview from "../../hooks/useReview";
 import CustomerSay from "../customerSay/CustomerSay";
 import "./Home.css";
+
+
+
 const Home = () => {
-  const [reviews, setReviews] = useState([]);
-  useEffect(() => {
-    fetch("review.json")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, []);
+    const [reviews,setReviews]=useReview()
   return (
     <div>
-      <div className="flex justify-around mt-8 items-center">
+      <div className="flex justify-around mt-40 mb-60 items-center">
         <div className="text-5xl font-bold ">
           <h2>It's Not Just snow-board</h2>
           <h2 className="text-cyan-400">Enjoy your life </h2>
@@ -32,9 +31,10 @@ const Home = () => {
           alt=""
         />
       </div>
-      <h1 className="text-3xl font-semibold mt-20 text-orange-600">
+      <h1 className="text-4xl font-semibold mt-20 text-sky-600 ">
         Our Customers Say
-      </h1>
+          </h1>
+          <hr className="w-60 mx-auto mt-5 " />
       <div className="reviews-container">
         {reviews.map((review) => (
           <CustomerSay key={review.id} review={review}></CustomerSay>
